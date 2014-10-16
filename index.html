@@ -77,10 +77,11 @@
 
 						wallet.images.forEach(
 							function (image) {
-								var tmp = $('<img>').attr('src', 'images/ajax-loader.gif');
+								var tmp = $('<img>').attr('src', 'images/ajax-loader.gif').addClass('hidden');
 								var img = $('<img>').attr('src', image).load(
 									function () {
 										tmp.remove();
+										img.removeClass('hidden');
 									}
 								);
 

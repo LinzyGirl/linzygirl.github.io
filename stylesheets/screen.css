@@ -573,3 +573,7 @@ figure {
   margin-bottom: 24px;
   padding-bottom: 24px;
 }
+
+.hidden {
+  display: none;
+}
