@@ -77,9 +77,14 @@
 
 						wallet.images.forEach(
 							function (image) {
-								figure.append(
-									$('<img>').attr('src', image)
+								var tmp = $('<img>').attr('src', 'images/ajax-loader.gif');
+								var img = $('<img>').attr('src', image).load(
+									function () {
+										tmp.remove();
+									}
 								);
+
+								figure.append(img).append(tmp);
 							}
 						);
 
