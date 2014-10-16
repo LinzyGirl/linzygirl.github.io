@@ -567,3 +567,9 @@ dd p:first-child {
   font-size: .85em;
   font-style: italic;
 }
+
+figure {
+  border-bottom: 0.1em solid #D3CCC1;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
