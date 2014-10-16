@@ -14,8 +14,83 @@
 		<script type="text/javascript" src="javascripts/headsmart.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function () {
-				$('#main_content').headsmart()
-			})
+				$('#main_content').headsmart();
+
+				var wallets = [
+					{
+						'caption': 'A lovely mustachiod wallet',
+						'images': [
+							'images/crafts/wallets/2014-10-15 21.44.13.jpg',
+							'images/crafts/wallets/2014-10-15 21.44.28.jpg',
+							'images/crafts/wallets/2014-10-15 21.45.07.jpg',
+							'images/crafts/wallets/2014-10-15 21.45.47.jpg',
+						],
+					},
+					{
+						'caption': 'A classy blue wallet for the men',
+						'images': [
+							'images/crafts/wallets/2014-10-15 21.46.25.jpg',
+							'images/crafts/wallets/2014-10-15 21.46.34.jpg',
+							'images/crafts/wallets/2014-10-15 21.46.57.jpg',
+							'images/crafts/wallets/2014-10-15 21.48.05.jpg',
+						],
+					},
+					{
+						'caption': 'Oink Oink!',
+						'images': [
+							'images/crafts/wallets/2014-10-15 21.57.59.jpg',
+							'images/crafts/wallets/2014-10-15 21.58.34.jpg',
+							'images/crafts/wallets/2014-10-15 21.59.02.jpg',
+							'images/crafts/wallets/2014-10-15 21.59.27.jpg',
+						],
+					},
+					{
+						'caption': 'Pixely stripes are always in style. They\'re colorful too',
+						'images': [
+							'images/crafts/wallets/2014-10-15 22.00.34.jpg',
+							'images/crafts/wallets/2014-10-15 22.00.44.jpg',
+							'images/crafts/wallets/2014-10-15 22.00.58.jpg',
+							'images/crafts/wallets/2014-10-15 22.01.20.jpg',
+						],
+					},
+					{
+						'caption': 'Zebra print with room for anything you could come up with',
+						'images': [
+							'images/crafts/wallets/2014-10-15 22.01.42.jpg',
+							'images/crafts/wallets/2014-10-15 22.02.00.jpg',
+							'images/crafts/wallets/2014-10-15 22.02.22.jpg',
+						],
+					},
+					{
+						'caption': 'Who, Who! An owl coin purse of course!',
+						'images': [
+							'images/crafts/wallets/2014-10-15 22.02.54.jpg',
+							'images/crafts/wallets/2014-10-15 22.03.10.jpg',
+							'images/crafts/wallets/2014-10-15 22.03.26.jpg',
+						],
+					},
+				];
+
+				wallets.forEach(
+					function (wallet) {
+						var figure = $('<figure>');
+
+						wallet.images.forEach(
+							function (image) {
+								figure.append(
+									$('<img>').attr('src', image)
+								);
+							}
+						);
+
+						figure.append(
+							$('<figcaption>').html(wallet.caption)
+						);
+
+						$('.wallets').append(figure);
+					}
+				);
+			});
 		</script>
 		<title>Craft Time</title>
 	</head>
@@ -47,46 +122,8 @@
 
 				<h3><a name="current-crafts" class="anchor" href="#current-crafts"><span class="octicon octicon-link"></span></a>Current Craft Projects</h3>
 				<p>Lately I've been making duct tape wallets and coin purses.</p>
-				<figure>
-					<img src="images/crafts/wallets/2014-10-15 21.44.13.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.44.28.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.45.07.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.45.47.jpg" />
-					<figcaption>A lovely mustachiod wallet</figcaption>
-				</figure>
-				<figure>
-					<img src="images/crafts/wallets/2014-10-15 21.46.25.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.46.34.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.46.57.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.48.05.jpg" />
-					<figcaption>A classy blue wallet for the men</figcaption>
-				</figure>
-				<figure>
-					<img src="images/crafts/wallets/2014-10-15 21.57.59.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.58.34.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.59.02.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 21.59.27.jpg" />
-					<figcaption>Oink Oink!</figcaption>
-				</figure>
-				<figure>
-					<img src="images/crafts/wallets/2014-10-15 22.00.34.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 22.00.44.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 22.00.58.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 22.01.20.jpg" />
-					<figcaption>Pixely stripes are always in style. They're colorful too</figcaption>
-				</figure>
-				<figure>
-					<img src="images/crafts/wallets/2014-10-15 22.01.42.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 22.02.00.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 22.02.22.jpg" />
-					<figcaption>Zebra print with room for anything you could come up with</figcaption>
-				</figure>
-				<figure>
-					<img src="images/crafts/wallets/2014-10-15 22.02.54.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 22.03.10.jpg" />
-					<img src="images/crafts/wallets/2014-10-15 22.03.26.jpg" />
-					<figcaption>Who, Who! An owl coin purse of course!</figcaption>
-				</figure>
+				<div class="wallets">
+				</div>
 
 				<h3><a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 				<p></p>
@@ -106,4 +143,3 @@
 		</div>
 	</body>
 </html>
-`
